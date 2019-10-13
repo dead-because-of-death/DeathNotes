@@ -15,8 +15,10 @@ public class MainMenuController {
         HttpSession session = request.getSession(false);
         if(session != null && session.getAttribute("user") != null) {
             userData.addAttribute("username", session.getAttribute("user"));
+            userData.addAttribute("logged", true);
+        }else {
+            userData.addAttribute("logged", false);
         }
-
         return "menu";
     }
 }

@@ -11,10 +11,25 @@
     <table>
         <tr>
             <td>
-                <a href="/login">Log in</a>
+                <div th:unless="${logged}">
+                    <form action="/login" th:method="get">
+                        <input type="submit" value="Log in">
+                    </form>
+                </div>
             </td>
             <td>
-                <a href="/signup">Sign up</a>
+                <div th:unless="${logged}">
+                    <form action="/signup" th:method="get">
+                        <input type="submit" value="Sign up">
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div th:if="${logged}">
+                    <form th:action="@{/logout}" th:method="post">
+                        <input type="submit" value="Log out">
+                    </form>
+                </div>
             </td>
             <td>
                 <label th:text="${username}"></label>

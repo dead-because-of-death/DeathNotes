@@ -1,8 +1,11 @@
-package kojima.genius.deathnotes;
+package kojima.genius.deathnotes.entities;
 
+import kojima.genius.deathnotes.entities.Note;
+import kojima.genius.deathnotes.entities.Role;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -20,4 +23,6 @@ public class User {
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Note> notes;
 }

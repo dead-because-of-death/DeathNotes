@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="css/menu-style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../static/css/menu-style.css" media="screen" />
     <title>DeathNotes</title>
 </head>
 <body>
@@ -13,7 +14,10 @@
                 <a href="/login">Log in</a>
             </td>
             <td>
-                <a href="/signin">Sign in</a>
+                <a href="/signup">Sign up</a>
+            </td>
+            <td>
+                <label th:text="${username}"></label>
             </td>
         </tr>
     </table>

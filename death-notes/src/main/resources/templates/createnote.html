@@ -3,9 +3,9 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/menu-style.css}" />
-    <link rel="stylesheet" type="text/css" href="../static/css/menu-style.css" media="screen" />
-    <title>DeathNotes</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/createnote-style.css}" />
+    <link rel="stylesheet" type="text/css" href="../static/css/createnote-style.css" media="screen" />
+    <title>Create note</title>
 </head>
 <body>
 <div id="upper-block">
@@ -33,17 +33,17 @@
                 </div>
             </td>
             <td id="username">
-                    <a th:href="@{/userpage}">
-                        <label  th:text="${username}"></label>
-                    </a>
+                <a th:href="@{/userpage}">
+                    <label  th:text="${username}"></label>
+                </a>
             </td>
         </tr>
     </table>
 </div>
-
-<div  th:if="${logged}" id="add-note-button">
-    <div id="button-upper-text">Add a new note</div>
-    <a id="plus-inside--button" th:href="@{/createnote}">+</a>
-</div>
+    <form id="noteform" th:action="@{/createnote}" th:method="post">
+        <textarea rows="20" cols="100" maxlength="500" minlength="1" name="text" form=""></textarea>
+        <br>
+        <input id="save-button" type="submit" class="submit" value="save">
+    </form>
 </body>
 </html>

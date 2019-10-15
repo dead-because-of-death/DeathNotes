@@ -27,31 +27,6 @@ body {
     height: 100px;
 }
 
-#add-note-button {
-    text-align: center;
-    position:absolute;
-    top:40%;
-    left:40%;
-    width: 320px;
-    height: 320px;
-    border-radius: 50%;
-    background: linear-gradient(60deg, #D8125A, #FFBC42);
-}
-
-#button-upper-text {
-    position: relative;
-    top: -15%;
-    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
-    color: azure;
-    font-size: 20px;
-}
-
-#plus-inside--button {
-    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
-    color: azure;
-    font-size: 250px;
-}
-
 textarea:focus, input:focus{
     outline: none;
 }
@@ -68,4 +43,24 @@ a {
     margin: 0;
     font-size: 50px;
     color: #475A67;
+}
+
+#noteform {
+    position:absolute;
+    top:20%;
+    left:5%;
+}
+
+textarea {
+    background: linear-gradient(60deg, #FFE66D, #FFF0F0);
+    border-radius: 1%;
+    resize: none;
+    color: black;
+    font-size: 20px;
+}
+
+#save-button {
+    height: 60px;
+    width: 200px;
+    font-size: 40px;
 }

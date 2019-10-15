@@ -1,4 +1,4 @@
-package kojima.genius.deathnotes;
+package kojima.genius.deathnotes.repositories;
 
 import kojima.genius.deathnotes.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;

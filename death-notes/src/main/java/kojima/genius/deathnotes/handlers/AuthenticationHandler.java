@@ -1,5 +1,7 @@
 package kojima.genius.deathnotes.handlers;
 
+import kojima.genius.deathnotes.repositories.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
@@ -12,6 +14,9 @@ import java.io.IOException;
 @Component
 public class AuthenticationHandler implements AuthenticationSuccessHandler {
 
+    @Autowired
+    UserRepository userRep;
+
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
                                         HttpServletResponse response,
@@ -19,7 +24,7 @@ public class AuthenticationHandler implements AuthenticationSuccessHandler {
             throws IOException {
         HttpSession session = request.getSession(false);
         if (session != null) {
-            session.setAttribute("user", authentication.getName());
+            session.setAttribute("user", userRep.findByUsername(authentication.getName()));
         }
         response.sendRedirect("/");
     }

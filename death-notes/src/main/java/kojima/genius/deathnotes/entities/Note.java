@@ -10,7 +10,7 @@ public class Note {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    Long id;
     @Lob
     String text;
     @ManyToOne

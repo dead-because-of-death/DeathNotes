@@ -14,9 +14,6 @@ import java.io.IOException;
 @Component
 public class AuthenticationHandler implements AuthenticationSuccessHandler {
 
-    @Autowired
-    UserRepository userRep;
-
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request,
                                         HttpServletResponse response,
@@ -24,7 +21,7 @@ public class AuthenticationHandler implements AuthenticationSuccessHandler {
             throws IOException {
         HttpSession session = request.getSession(false);
         if (session != null) {
-            session.setAttribute("user", userRep.findByUsername(authentication.getName()));
+            session.setAttribute("user", authentication.getName());
         }
         response.sendRedirect("/");
     }

@@ -40,8 +40,8 @@
         </tr>
     </table>
 </div>
-    <form id="noteform" th:action="@{/createnote}" th:method="post">
-        <textarea rows="20" cols="100" maxlength="500" minlength="1" name="text" form=""></textarea>
+    <form id="noteform" th:object="${note}" th:action="@{/createnote}" th:method="post">
+        <textarea rows="20" cols="100" maxlength="500" minlength="1" id="text" name="text"></textarea>
         <br>
         <input id="save-button" type="submit" class="submit" value="save">
     </form>

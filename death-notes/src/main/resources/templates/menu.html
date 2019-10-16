@@ -40,7 +40,9 @@
         </tr>
     </table>
 </div>
-
+<div th:id="notes-div" th:each="note : ${notes}">
+    <span th:text="${note.getText()}"></span>
+</div>
 <div  th:if="${logged}" id="add-note-button">
     <div id="button-upper-text">Add a new note</div>
     <a id="plus-inside--button" th:href="@{/createnote}">+</a>

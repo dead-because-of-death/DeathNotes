@@ -42,8 +42,8 @@ public class NoteCreationController {
         HttpSession session = request.getSession(false);
         User user = userRep.findByUsername( (String) session.getAttribute("user"));
         user.getNotes().add(note);
-        userRep.save(user);
         note.setUser(user);
+        userRep.save(user);
         noteRep.save(note);
         return "redirect:/";
     }

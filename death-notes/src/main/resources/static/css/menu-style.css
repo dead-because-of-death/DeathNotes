@@ -69,3 +69,11 @@ a {
     font-size: 50px;
     color: #475A67;
 }
+
+#note-div {
+    background: linear-gradient(60deg, #FFE66D, #FFF0F0);
+    border-radius: 1%;
+    resize: none;
+    color: black;
+    font-size: 20px;
+}

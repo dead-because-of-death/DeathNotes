@@ -29,7 +29,7 @@ public class MainMenuController {
             user = userRep.findByUsername( (String) session.getAttribute("user"));
             userDataAndNotes.addAttribute("username", user.getUsername());
             userDataAndNotes.addAttribute("logged", true);
-            if (user.getNotes() != null) {
+            if (!user.getNotes().isEmpty()) {
                 userDataAndNotes.addAttribute("notes", user.getNotes());
                 userDataAndNotes.addAttribute("hasmessage", true);
             }else {

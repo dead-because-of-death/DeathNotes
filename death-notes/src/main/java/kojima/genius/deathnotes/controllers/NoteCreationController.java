@@ -41,10 +41,10 @@ public class NoteCreationController {
     String writeNote(Note note, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         User user = userRep.findByUsername( (String) session.getAttribute("user"));
+
         user.getNotes().add(note);
         note.setUser(user);
         userRep.save(user);
-        noteRep.save(note);
         return "redirect:/";
     }
 }

@@ -40,17 +40,30 @@
         </tr>
     </table>
 </div>
-<label th:if="(${logged}) and (${hasmessage})" id="mini-button-text">Add a note</label>
-<div  th:if="(${logged}) and (${hasmessage})" class="add-note-button" id="mini-button">
-    <a id="plus-inside-mini-button" th:href="@{/createnote}">+</a>
+<div>
+    <div  th:if="(${logged}) and (${hasmessage})" id="left-mini-button">
+        <label id="left-mini-button-text">Add a note</label>
+        <a id="plus-inside-left-mini-button" class="add-note-button" th:href="@{/createnote}">+</a>
+    </div>
+
+    <div  th:if="(${logged}) and (${hasdictionary})" id="right-mini-button">
+        <label id="right-mini-button-text">Add a dictionary</label>
+        <a id="plus-inside-right-mini-button" class="add-dictionary-button" th:href="@{/createnote}">+</a>
+    </div>
 </div>
 <br>
 <div th:if="${hasmessage}" id="notes-div" th:each="note : ${notes}">
-    <label class="note-div" th:text="${note.getText()}"></label>
+    <div class="note-div">
+        <label  th:text="${note.getText()}"></label>
+    </div>
 </div>
-<div  th:if="${logged}" th:unless="${hasmessage}" class="add-note-button" id="big-button">
-    <div id="big-button-upper-text">Add a new note</div>
-    <a id="plus-inside-big-button" th:href="@{/createnote}">+</a>
+<div  th:if="${logged}" th:unless="${hasmessage}" class="add-note-button" id="left-big-button">
+    <div id="left-big-button-upper-text">Add a new note</div>
+    <a id="plus-inside-left-big-button" th:href="@{/createnote}">+</a>
+</div>
+<div  th:if="${logged}" th:unless="${hasdictionary}" class="add-dictionary-button" id="right-big-button">
+    <div id="right-big-button-upper-text">Add a new dictionary</div>
+    <a id="plus-inside-right-big-button" th:href="@{/createdictionary}">+</a>
 </div>
 </body>
 </html>

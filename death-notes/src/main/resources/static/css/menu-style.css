@@ -27,20 +27,6 @@ body {
     height: 100px;
 }
 
-#big-button-upper-text {
-    position: relative;
-    top: -15%;
-    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
-    color: azure;
-    font-size: 20px;
-}
-
-#plus-inside-big-button {
-    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
-    color: azure;
-    font-size: 250px;
-}
-
 textarea:focus, input:focus{
     outline: none;
 }
@@ -75,26 +61,95 @@ a {
     background: linear-gradient(60deg, #D8125A, #FFBC42);
 }
 
-#big-button {
+.add-dictionary-button {
+    text-align: center;
+
+    border-radius: 50%;
+    background: linear-gradient(60deg, #003457, #1C875C);
+}
+
+#left-big-button {
     position:absolute;
     top:40%;
-    left:40%;
+    left:5%;
     width: 320px;
     height: 320px;
 }
 
-#mini-button {
-    width: 40px;
-    height: 40px;
-}
-
-#mini-button-text {
+#left-big-button-upper-text {
+    position: relative;
+    top: -15%;
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 20px;
 }
 
-#plus-inside-mini-button {
+#plus-inside-left-big-button {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 250px;
+}
+
+#right-big-button {
+    position:absolute;
+    top:40%;
+    right:5%;
+    width: 320px;
+    height: 320px;
+}
+
+#right-big-button-upper-text {
+    position: relative;
+    top: -15%;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 20px;
+}
+
+#plus-inside-right-big-button {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 250px;
+}
+
+#left-mini-button {
+    position: relative;
+    display: inline-block;
+    left: 25px;
+}
+
+#left-mini-button-text {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 20px;
+}
+
+#plus-inside-left-mini-button {
+    width: 40px;
+    height: 40px;
+    display: block;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 35px;
+}
+
+#right-mini-button {
+    position: absolute;
+    right: 5%;
+    display: inline-block;
+    align-content: end;
+}
+
+#right-mini-button-text {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 20px;
+}
+
+#plus-inside-right-mini-button {
+    width: 40px;
+    height: 40px;
+    display: block;
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 35px;
@@ -102,4 +157,9 @@ a {
 
 #notes-div {
     margin: 15px;
+    padding-right: 50%;
+}
+
+label {
+    white-space: pre-wrap;
 }

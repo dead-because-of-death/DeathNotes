@@ -24,7 +24,7 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.authorizeRequests().regexMatchers("/login", "/signup").anonymous()
-                .antMatchers("/createnote").authenticated()
+                .antMatchers("/createnote", "/addfriend").authenticated()
                 .and().formLogin().loginPage("/login").successHandler(new AuthenticationHandler())
                 .and().logout().logoutUrl("/logout").invalidateHttpSession(true).deleteCookies("JSESSIONID").logoutSuccessHandler(new LogoutHandler());
 

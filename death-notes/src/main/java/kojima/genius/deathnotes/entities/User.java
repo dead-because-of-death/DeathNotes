@@ -32,4 +32,7 @@ public class User {
     private Set<Role> roles;
     @OneToMany(cascade = CascadeType.ALL)
     private List<Note> notes;
+
+    @OneToMany
+    private List<User> friends;
 }

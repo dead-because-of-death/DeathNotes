@@ -3,9 +3,9 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" th:href="@{/css/createnote-style.css}" />
-    <link rel="stylesheet" type="text/css" href="../static/css/createnote-style.css" media="screen" />
-    <title>Create note</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/addfriend-style.css}" />
+    <link rel="stylesheet" type="text/css" href="../static/css/addfriend-style.css" media="screen" />
+    <title>Add a friend</title>
 </head>
 <body>
 <div id="upper-block">
@@ -40,10 +40,14 @@
         </tr>
     </table>
 </div>
-    <form id="noteform" th:object="${note}" th:action="@{/createnote}" th:method="post">
-        <textarea rows="20" cols="100" maxlength="2000" minlength="1" id="text" name="text"></textarea>
-        <br>
-        <input id="save-button" type="submit" class="submit" value="save">
-    </form>
+<form id="addfriendform" th:object="${user}" th:action="@{/addfriend}" th:method="post">
+    Name of a friend: <input type="text" class="text-input" name="username">
+    <input id="save-button" type="submit" class="submit" value="Add">
+    <div id="error" th:if="${param.error}">
+        Can't find that name
+        <br>or this user already in your friendlist
+        <br>or you just tryna add yourself LUL
+    </div>
+</form>
 </body>
 </html>

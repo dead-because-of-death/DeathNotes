@@ -1,0 +1,70 @@
+html,body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #D8125A;
+    background: linear-gradient(90deg, #1F3646, #475A67);
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+}
+
+.submit {
+    height: 30px;
+    width: 100px;
+    color: azure;
+    font-size: 20px;
+    border-color: transparent;
+    background: transparent;
+}
+
+#upper-block {
+    background: linear-gradient(60deg, #D8125A, #FFBC42);
+    padding: 5px;
+    alignment: right;
+    height: 100px;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+a {
+    align-self: end;
+    text-decoration: none;
+    color: #475A67;
+}
+
+#username {
+    width: 100%;
+    text-align: right;
+    margin: 0;
+    font-size: 50px;
+    color: #475A67;
+}
+
+#addfriendform {
+    position:absolute;
+    top:30%;
+    left:35%;
+    color: azure;
+    font-size: 20px;
+}
+
+#save-button {
+    height: 35px;
+    width: 150px;
+    font-size: 30px;
+}
+
+.text-input {
+    border-radius: 5px;
+    width: 200px;
+}
+
+#error {
+    margin-top: 30px;
+    text-align: center;
+}

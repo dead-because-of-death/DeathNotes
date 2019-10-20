@@ -32,6 +32,13 @@
                     </form>
                 </div>
             </td>
+            <td>
+                <div th:if="${logged}" id="add-friend-button">
+                    <form action="/addfriend" th:method="get">
+                        <input type="submit" class="submit"  value="Add a new friend">
+                    </form>
+                </div>
+            </td>
             <td id="username">
                     <a th:href="@{/userpage}">
                         <label  th:text="${username}"></label>

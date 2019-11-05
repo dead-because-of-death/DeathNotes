@@ -3,43 +3,13 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
+    <link th:replace="main-template::style"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/addfriend-style.css}" />
     <link rel="stylesheet" type="text/css" href="../static/css/addfriend-style.css" media="screen" />
     <title>Add a friend</title>
 </head>
 <body>
-<div id="upper-block">
-    <table>
-        <tr>
-            <td>
-                <div th:unless="${logged}">
-                    <form action="/login" th:method="get">
-                        <input type="submit" class="submit" value="Log in">
-                    </form>
-                </div>
-            </td>
-            <td>
-                <div th:unless="${logged}">
-                    <form action="/signup" th:method="get">
-                        <input type="submit" class="submit" value="Sign up">
-                    </form>
-                </div>
-            </td>
-            <td>
-                <div th:if="${logged}">
-                    <form th:action="@{/logout}" th:method="post">
-                        <input type="submit" class="submit" value="Log out">
-                    </form>
-                </div>
-            </td>
-            <td id="username">
-                <a th:href="@{/userpage}">
-                    <label  th:text="${username}"></label>
-                </a>
-            </td>
-        </tr>
-    </table>
-</div>
+<div th:replace="main-template::header"/>
 <form id="addfriendform" th:object="${user}" th:action="@{/addfriend}" th:method="post">
     Name of a friend: <input type="text" class="text-input" name="username">
     <input id="save-button" type="submit" class="submit" value="Add">

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link th:fragment="style" rel="stylesheet" type="text/css" th:href="@{/css/main-style.css}" />
+    <link rel="stylesheet" type="text/css" href="../static/css/main-style.css" media="screen" />
+</head>
+<body>
+<div th:fragment="header" id="upper-block">
+    <table>
+        <tr>
+            <td>
+                <div th:unless="${logged}">
+                    <form action="/login" th:method="get">
+                        <input type="submit" class="submit" value="Log in">
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div th:unless="${logged}">
+                    <form action="/signup" th:method="get">
+                        <input type="submit" class="submit" value="Sign up">
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div th:if="${logged}">
+                    <form th:action="@{/logout}" th:method="post">
+                        <input type="submit" class="submit" value="Log out">
+                    </form>
+                </div>
+            </td>
+            <td>
+                <div th:if="${logged}" id="add-friend-button">
+                    <form action="/addfriend" th:method="get">
+                        <input type="submit" class="submit"  value="Add a new friend">
+                    </form>
+                </div>
+            </td>
+            <td id="username">
+                <a th:href="@{/userpage}">
+                    <label  th:text="${username}"></label>
+                </a>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

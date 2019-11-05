@@ -3,50 +3,13 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <meta charset="UTF-8">
+    <link th:replace="main-template::style"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/menu-style.css}" />
     <link rel="stylesheet" type="text/css" href="../static/css/menu-style.css" media="screen" />
     <title>DeathNotes</title>
 </head>
 <body>
-<div id="upper-block">
-    <table>
-        <tr>
-            <td>
-                <div th:unless="${logged}">
-                    <form action="/login" th:method="get">
-                        <input type="submit" class="submit" value="Log in">
-                    </form>
-                </div>
-            </td>
-            <td>
-                <div th:unless="${logged}">
-                    <form action="/signup" th:method="get">
-                        <input type="submit" class="submit" value="Sign up">
-                    </form>
-                </div>
-            </td>
-            <td>
-                <div th:if="${logged}">
-                    <form th:action="@{/logout}" th:method="post">
-                        <input type="submit" class="submit" value="Log out">
-                    </form>
-                </div>
-            </td>
-            <td>
-                <div th:if="${logged}" id="add-friend-button">
-                    <form action="/addfriend" th:method="get">
-                        <input type="submit" class="submit"  value="Add a new friend">
-                    </form>
-                </div>
-            </td>
-            <td id="username">
-                    <a th:href="@{/userpage}">
-                        <label  th:text="${username}"></label>
-                    </a>
-            </td>
-        </tr>
-    </table>
-</div>
+<div th:replace="main-template::header"/>
 <div>
     <div  th:if="(${logged}) and (${hasmessage})" id="left-mini-button">
         <label id="left-mini-button-text">Add a note</label>

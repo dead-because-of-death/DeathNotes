@@ -116,3 +116,12 @@
 label {
     white-space: pre-wrap;
 }
+
+.red-cross {
+    width: 15px;
+    height: 15px;
+    display: block;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 15px;
+}

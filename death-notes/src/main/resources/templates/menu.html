@@ -23,6 +23,9 @@
 </div>
 <br>
 <div th:if="${hasmessage}" id="notes-div" th:each="note : ${notes}">
+        <form class="red-cross" th:object="${note}" th:action="@{'/note/' + ${note.getId()} + '/delete'}" th:method="post">
+            <input id="save-button" type="submit" class="submit" value="X">
+        </form>
     <div class="note-div">
         <label  th:text="${note.getText()}"></label>
     </div>

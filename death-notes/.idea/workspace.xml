@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3265e09f-f111-4b83-a825-49f3b783a714" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/NoteMaintainingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/edit-style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-note.html" afterDir="false" />
+    <list default="true" id="3265e09f-f111-4b83-a825-49f3b783a714" name="Default Changelist" comment="Now notes can be edited.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/MainMenuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/menu-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/menu-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/NoteMaintainingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/NoteMaintainingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-note.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-note.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,6 +34,7 @@
         <option value="HTML File" />
         <option value="CSS File" />
         <option value="Class" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -113,7 +112,7 @@
       <workItem from="1574010957120" duration="9869000" />
       <workItem from="1574333979826" duration="2594000" />
       <workItem from="1574341911409" duration="7761000" />
-      <workItem from="1574687811461" duration="1175000" />
+      <workItem from="1574687811461" duration="7218000" />
     </task>
     <task id="LOCAL-00001" summary="Now really did:)">
       <created>1572969757524</created>
@@ -136,7 +135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574023877605</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Now notes can be edited.">
+      <created>1574690600310</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1574690600310</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,6 +165,7 @@
     <MESSAGE value="Now really did:)" />
     <MESSAGE value="Made a template for pages to reduce front end coding." />
     <MESSAGE value="Now notes can be deleted." />
-    <option name="LAST_COMMIT_MESSAGE" value="Now notes can be deleted." />
+    <MESSAGE value="Now notes can be edited." />
+    <option name="LAST_COMMIT_MESSAGE" value="Now notes can be edited." />
   </component>
 </project>

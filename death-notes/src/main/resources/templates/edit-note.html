@@ -10,7 +10,7 @@
 </head>
 <body>
 <div th:replace="main-template::header"/>
-<form id="noteform" th:object="${note}" th:action="@{'/note/' + ${note.getId()} + '/edit'}" th:method="post">
+<form id="noteform" th:object="${note}" th:action="@{'/note/' + ${index} + '/edit'}" th:method="post">
     <textarea rows="20" cols="100" maxlength="2000" minlength="1" id="text" name="text" th:text="${note.getText()}"></textarea>
     <br>
     <input id="save-button" type="submit" class="submit" value="update">

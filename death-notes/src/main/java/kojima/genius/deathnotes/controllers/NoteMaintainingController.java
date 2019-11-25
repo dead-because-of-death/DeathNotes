@@ -25,44 +25,32 @@ public class NoteMaintainingController {
         this.userRep = userRep;
     }
 
-    @PostMapping("/note/{id}/delete")
-    public String deleteNote(@PathVariable String id, HttpServletRequest request) {
+    @PostMapping("/note/{index}/delete")
+    public String deleteNote(@PathVariable String index, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         User user = userRep.findByUsername( (String) session.getAttribute("user"));
-        Note neededNote = user.getNotes().stream().filter(note -> {
-            if(note.getId().equals(new Long(id))) return true;
-            return false;
-        }).findFirst().get();
+        Note neededNote = user.getNotes().get(new Integer(index));
         user.getNotes().remove(neededNote);
         userRep.save(user);
         noteRep.delete(neededNote);
         return "redirect:/";
     }
 
-    @GetMapping("/note/{id}/edit")
-    public String editNotepage(@PathVariable String id, HttpServletRequest request, Model model) {
+    @GetMapping("/note/{index}/edit")
+    public String editNotepage(@PathVariable String index, HttpServletRequest request, Model model) {
         HttpSession session = request.getSession(false);
         User user = userRep.findByUsername( (String) session.getAttribute("user"));
-        Note neededNote = user.getNotes().stream().filter(note -> {
-            if(note.getId().equals(new Long(id))) return true;
-            return false;
-        }).findFirst().get();
-        model.addAttribute("note", neededNote);
+        model.addAttribute("note", user.getNotes().get(new Integer(index)));
+        model.addAttribute("index",index);
         userRep.save(user);
         return "edit-note";
     }
 
-    @PostMapping("/note/{id}/edit")
-    public String editNote(@PathVariable String id, HttpServletRequest request, Note note) {
+    @PostMapping("/note/{index}/edit")
+    public String editNote(@PathVariable String index, HttpServletRequest request, Note note) {
         HttpSession session = request.getSession(false);
         User user = userRep.findByUsername( (String) session.getAttribute("user"));
-        Note neededNote = user.getNotes().stream().filter(localNote -> {
-            if(localNote.getId().equals(new Long(id))) return true;
-            return false;
-        }).findFirst().get();
-        user.getNotes().remove(neededNote);
-        neededNote.setText(note.getText());
-        user.getNotes().add(neededNote);
+        user.getNotes().get(new Integer(index)).setText(note.getText());
         userRep.save(user);
         return "redirect:/";
     }

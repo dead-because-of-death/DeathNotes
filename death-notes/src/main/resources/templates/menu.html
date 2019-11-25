@@ -6,12 +6,10 @@
     <link th:replace="main-template::style"/>
     <link rel="stylesheet" type="text/css" th:href="@{/css/menu-style.css}" />
     <link rel="stylesheet" type="text/css" href="../static/css/menu-style.css" media="screen" />
-    <script th:replace="main-template::jquery"></script>
-    <script type="text/javascript" src="../static/scripts/"></script>
     <title>DeathNotes</title>
 </head>
 <body>
-<div th:replace="main-template::header"></div>
+<div th:replace="main-template::header"/>
 <div>
     <div  th:if="(${logged}) and (${hasmessage})" id="left-mini-button">
         <label id="left-mini-button-text">Add a note</label>
@@ -24,16 +22,16 @@
     </div>
 </div>
 <br>
-<div th:if="${hasmessage}" id="notes-div" th:each="note : ${notes}">
+<div th:if="${hasmessage}" id="notes-div" th:each="note,counter : ${notes}">
     <table>
         <tr>
             <td>
-                <form th:object="${note}" th:action="@{'/note/' + ${note.getId()} + '/delete'}" th:method="post">
+                <form th:object="${note}" th:action="@{'/note/' + ${counter.index} + '/delete'}" th:method="post">
                     <input class="red-cross" type="submit" value="x">
                 </form>
             </td>
             <td>
-                <a class="edit" th:href="@{'/note/' + ${note.getId()} + '/edit'}">
+                <a class="edit" th:href="@{'/note/' + ${counter.index} + '/edit'}">
                     Edit
                 </a>
             </td>

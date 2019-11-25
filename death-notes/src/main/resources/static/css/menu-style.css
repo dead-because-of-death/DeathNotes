@@ -118,10 +118,20 @@ label {
 }
 
 .red-cross {
-    width: 15px;
-    height: 15px;
-    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-color: transparent;
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
-    font-size: 15px;
+    background-color: #D8125A;
+    font-size: 12px;
+}
+
+.edit {
+    border-radius: 50%;
+    border-color: transparent;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 20px;
 }

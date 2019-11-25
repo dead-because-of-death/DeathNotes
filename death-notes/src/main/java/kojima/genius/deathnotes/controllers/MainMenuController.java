@@ -18,11 +18,14 @@ import java.util.List;
 @Controller
 public class MainMenuController {
 
-    @Autowired
     NoteRepository noteRep;
 
-    @Autowired
     UserRepository userRep;
+
+    public MainMenuController(NoteRepository noteRep, UserRepository userRep) {
+        this.noteRep = noteRep;
+        this.userRep = userRep;
+    }
 
     @GetMapping("/")
     public String getPage(HttpServletRequest request, Model userDataAndNotes) {
@@ -47,17 +50,4 @@ public class MainMenuController {
         return "menu";
     }
 
-    @PostMapping("/note/{id}/delete")
-    public String deleteNote(@PathVariable String id, HttpServletRequest request) {
-        HttpSession session = request.getSession(false);
-        User user = userRep.findByUsername( (String) session.getAttribute("user"));
-        Note neededNote = user.getNotes().stream().filter(note -> {
-            if(note.getId().equals(new Long(id))) return true;
-            return false;
-        }).findFirst().get();
-        user.getNotes().remove(neededNote);
-        userRep.save(user);
-        noteRep.delete(neededNote);
-        return "redirect:/";
-    }
 }

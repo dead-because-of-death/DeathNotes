@@ -1,8 +1,9 @@
 package kojima.genius.deathnotes.controllers;
 
-import kojima.genius.deathnotes.entities.Note;
+import kojima.genius.deathnotes.entities.Dictionary;
+import kojima.genius.deathnotes.entities.Pair;
 import kojima.genius.deathnotes.entities.User;
-import kojima.genius.deathnotes.repositories.NoteRepository;
+import kojima.genius.deathnotes.repositories.DictionaryRepository;
 import kojima.genius.deathnotes.repositories.UserRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,20 +12,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @Controller
-public class NoteCreationController {
+public class DictionaryCreationController {
 
-    NoteRepository noteRep;
+    DictionaryRepository dictionaryRep;
 
     UserRepository userRep;
 
-    NoteCreationController(NoteRepository noteRep, UserRepository userRep) {
-        this.noteRep = noteRep;
+    DictionaryCreationController(DictionaryRepository dictionaryRep, UserRepository userRep) {
+        this.dictionaryRep = dictionaryRep;
         this.userRep = userRep;
     }
 
-    @GetMapping("/createnote")
+    @GetMapping("/createdictionary")
     String getPage(HttpServletRequest request, Model userData) {
         HttpSession session = request.getSession(false);
         User user;
@@ -36,16 +38,16 @@ public class NoteCreationController {
         }else {
             userData.addAttribute("logged", false);
         }
-        return "create-note";
+
+        return "create-dictionary";
     }
 
-    @PostMapping("/createnote")
-    String writeNote(Note note, HttpServletRequest request) {
+    @PostMapping("/createdictionary")
+    String writeDictionary(Dictionary dictionary, HttpServletRequest request) {
         HttpSession session = request.getSession(false);
         User user = userRep.findByUsername( (String) session.getAttribute("user"));
-
-        user.getNotes().add(note);
-        note.setUser(user);
+        user.getDictionaries().add(dictionary);
+        dictionary.setUser(user);
         userRep.save(user);
         return "redirect:/";
     }

@@ -1,12 +1,3 @@
-.note-div {
-    background: linear-gradient(60deg, #FFE66D, #FFF0F0);
-    border-radius: 5px;
-    color: black;
-    font-size: 20px;
-    padding: 5px;
-    margin: 5px;
-}
-
 .add-note-button {
     text-align: center;
 
@@ -21,85 +12,60 @@
     background: linear-gradient(60deg, #003457, #1C875C);
 }
 
-#left-big-button {
-    position:absolute;
-    top:40%;
-    left:5%;
+#note-big-button {
     width: 320px;
     height: 320px;
+    margin: 30%;
 }
 
-#left-big-button-upper-text {
+#note-big-button-text {
     position: relative;
-    top: -15%;
+    top: -7%;
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 20px;
 }
 
-#plus-inside-left-big-button {
+#plus-inside-note-big-button {
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 250px;
 }
 
-#right-big-button {
-    position:absolute;
-    top:40%;
-    right:5%;
+#dictionary-big-button {
     width: 320px;
     height: 320px;
+    margin: 30%;
 }
 
-#right-big-button-upper-text {
+#dictionary-big-button-upper-text {
     position: relative;
-    top: -15%;
+    top: -7%;
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 20px;
 }
 
-#plus-inside-right-big-button {
+#plus-inside-dictionary-big-button {
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 250px;
 }
 
-#left-mini-button {
+#note-mini-button {
     position: relative;
-    display: inline-block;
-    left: 25px;
-}
-
-#left-mini-button-text {
-    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
-    color: azure;
-    font-size: 20px;
-}
-
-#plus-inside-left-mini-button {
-    width: 40px;
-    height: 40px;
-    display: block;
-    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
-    color: azure;
-    font-size: 35px;
-}
-
-#right-mini-button {
-    position: absolute;
-    right: 5%;
     display: inline-block;
     align-content: end;
+    left: 3%;
 }
 
-#right-mini-button-text {
+#note-mini-button-text {
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 20px;
 }
 
-#plus-inside-right-mini-button {
+#plus-inside-note-mini-button {
     width: 40px;
     height: 40px;
     display: block;
@@ -108,9 +74,31 @@
     font-size: 35px;
 }
 
-#notes-div {
+#dictionary-mini-button {
+    position: relative;
+    display: inline-block;
+    align-content: end;
+    left: 3%;
+}
+
+#dictionary-mini-button-text {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 20px;
+}
+
+#plus-inside-dictionary-mini-button {
+    width: 40px;
+    height: 40px;
+    display: block;
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 35px;
+}
+
+.notes-div {
     margin: 15px;
-    padding-right: 50%;
+    padding-right: 10%;
 }
 
 label {
@@ -126,6 +114,7 @@ label {
     color: azure;
     background-color: #D8125A;
     font-size: 12px;
+    margin: 5px;
 }
 
 .edit {
@@ -134,4 +123,95 @@ label {
     font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
     color: azure;
     font-size: 20px;
+    margin: 5px;
+}
+
+.key {
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.key-div {
+    overflow-wrap: break-word;
+    background: linear-gradient(60deg, #FFE66D, #fdffca);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.value-div {
+    overflow-wrap: break-word;
+    background: linear-gradient(60deg, #FFE66D, #fdffca);
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.value {
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#dictionaries-div {
+    margin: 15px;
+    padding-right: 10%;
+}
+
+#notes {
+    margin-top: 50px;
+    height: fit-content;
+    width: 90%;
+    min-width: 500px;
+}
+
+#dictionaries {
+    margin-top: 50px;
+    width: 90%;
+    min-width: 500px;
+    height: fit-content;
+}
+
+#container {
+    position: relative;
+    left: 3%;
+    width: 94%;
+    min-height: calc(100% - 110px);
+    max-height: fit-content;
+    display: flex;
+    background: #475A67;
+}
+
+.note-div {
+    padding: 5px;
+    margin: 5px;
+    overflow-wrap: break-word;
+    background: linear-gradient(60deg, #FFE66D, #fdffca);
+    border-radius: 5px;
+}
+
+.note-text {
+    color: black;
+    font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    overflow-wrap: break-word;
+}
+
+.note {
+    background: #1F3646;
+}
+
+.dictionary {
+    background: #1F3646;
+}
+
+.dictionary-name {
+    font-family: 'DejaVu Sans', Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: 45px;
+    overflow-wrap: break-word;
 }

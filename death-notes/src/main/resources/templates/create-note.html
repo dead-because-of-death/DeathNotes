@@ -11,7 +11,7 @@
 <body>
 <div th:replace="main-template::header"/>
     <form id="noteform" th:object="${note}" th:action="@{/createnote}" th:method="post">
-        <textarea rows="20" cols="100" maxlength="2000" minlength="1" id="text" name="text"></textarea>
+        <textarea rows="20" cols="70" maxlength="2000" minlength="1" id="text" name="text"></textarea>
         <br>
         <input id="save-button" type="submit" class="submit" value="save">
     </form>

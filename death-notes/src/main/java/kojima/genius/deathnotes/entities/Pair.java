@@ -6,15 +6,14 @@ import javax.persistence.*;
 
 @Entity
 @Data
-public class Note {
-
+public class Pair {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     @Lob
-    String text;
+    String key;
 
-    @ManyToOne
-    User user;
+    @Lob
+    String value;
 }

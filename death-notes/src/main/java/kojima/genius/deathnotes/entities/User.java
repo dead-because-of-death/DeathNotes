@@ -30,8 +30,12 @@ public class User {
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles;
+
     @OneToMany(cascade = CascadeType.ALL)
     private List<Note> notes;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Dictionary> dictionaries;
 
     @OneToMany
     private List<User> friends;

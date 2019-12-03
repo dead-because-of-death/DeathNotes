@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script th:replace="main-template::jquery"></script>
+    <link th:replace="main-template::style"/>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/createdictionary-style.css}" />
+    <link rel="stylesheet" type="text/css" href="../static/css/createdictionary-style.css" media="screen" />
+    <script src="/scripts/addPair.js"></script>
+    <title>Create dictionary</title>
+</head>
+<body>
+<div th:replace="main-template::header"/>
+<form th:object="${dictionary}" th:action="@{/createdictionary}" th:method="post">
+    <div id="dictionaryform">
+        <br>
+        Name of dictionary: <input type="text" class="text" name="name" maxlength="30">
+        <br><br>
+        Word: <textarea rows="1" cols="30" maxlength="50" minlength="1" class="text" name="definitions[0].key"></textarea>
+        Definition: <textarea rows="1" cols="50" maxlength="500" minlength="1" class="text" name="definitions[0].value"></textarea>
+        <br><br>
+    </div>
+    <br>
+    <input id="save-button" type="submit" class="submit" value="save">
+</form>
+<button id="add" onclick="addPair()">+</button>
+</body>
+</html>

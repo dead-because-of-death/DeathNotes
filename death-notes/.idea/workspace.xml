@@ -1,14 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3265e09f-f111-4b83-a825-49f3b783a714" name="Default Changelist" comment="Now notes can be edited.">
+    <list default="true" id="3265e09f-f111-4b83-a825-49f3b783a714" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/DictionaryCreationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/DictionaryMaintainingController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/entities/Dictionary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/entities/Pair.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/repositories/DictionaryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/createdictionary-style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/scripts/addPair.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/create-dictionary.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/NoteMaintainingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/NoteMaintainingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/edit-note.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/edit-note.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/death-notes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/death-notes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/MainMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/MainMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/NoteCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/controllers/NoteCreationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/entities/Note.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/entities/Note.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/kojima/genius/deathnotes/entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/createnote-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/createnote-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/edit-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/edit-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/main-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/menu-style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/menu-style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/createnote.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/create-note.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/main-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/main-template.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/menu.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/menu.html" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,10 +48,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="HTML File" />
         <option value="CSS File" />
-        <option value="Class" />
         <option value="JavaScript File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -50,6 +68,11 @@
   </component>
   <component name="ProjectId" id="1TCdWuAH4s9a5mb4VWCdtkoBqsQ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RequestMappingsPanelOrder0" value="0" />
@@ -74,18 +97,6 @@
       <recent name="C:\Users\El_presidente\IdeaProjects\DeathNotes\death-notes\src\main\resources\static" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="DeathNotesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="death-notes" />
@@ -94,6 +105,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -112,7 +135,17 @@
       <workItem from="1574010957120" duration="9869000" />
       <workItem from="1574333979826" duration="2594000" />
       <workItem from="1574341911409" duration="7761000" />
-      <workItem from="1574687811461" duration="7218000" />
+      <workItem from="1574687811461" duration="7521000" />
+      <workItem from="1574867369022" duration="6407000" />
+      <workItem from="1574954089462" duration="18146000" />
+      <workItem from="1574976922296" duration="7918000" />
+      <workItem from="1575053310501" duration="5121000" />
+      <workItem from="1575059678291" duration="104000" />
+      <workItem from="1575124827695" duration="946000" />
+      <workItem from="1575203490990" duration="100000" />
+      <workItem from="1575203861898" duration="13477000" />
+      <workItem from="1575297317260" duration="6699000" />
+      <workItem from="1575392663931" duration="16202000" />
     </task>
     <task id="LOCAL-00001" summary="Now really did:)">
       <created>1572969757524</created>
@@ -142,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574690600310</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="I've done some refactoring.">
+      <created>1574699563719</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1574699563719</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,6 +206,41 @@
     <MESSAGE value="Made a template for pages to reduce front end coding." />
     <MESSAGE value="Now notes can be deleted." />
     <MESSAGE value="Now notes can be edited." />
-    <option name="LAST_COMMIT_MESSAGE" value="Now notes can be edited." />
+    <MESSAGE value="I've done some refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="I've done some refactoring." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1876" height="282" key="GridCell.Tab.0.bottom" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
+    <state width="1876" height="282" key="GridCell.Tab.0.center" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
+    <state width="1876" height="282" key="GridCell.Tab.0.left" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
+    <state width="1876" height="282" key="GridCell.Tab.0.right" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
+    <state width="1876" height="282" key="GridCell.Tab.1.bottom" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
+    <state width="1876" height="282" key="GridCell.Tab.1.center" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
+    <state width="1876" height="282" key="GridCell.Tab.1.left" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
+    <state width="1876" height="282" key="GridCell.Tab.1.right" timestamp="1575408921266">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1876" height="282" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1575408921266" />
   </component>
 </project>

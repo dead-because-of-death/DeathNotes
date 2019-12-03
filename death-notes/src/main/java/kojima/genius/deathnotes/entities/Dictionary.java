@@ -3,17 +3,20 @@ package kojima.genius.deathnotes.entities;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Data
-public class Note {
+public class Dictionary {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
-    @Lob
-    String text;
+    String name;
+
+    @OneToMany(cascade = CascadeType.ALL)
+    List<Pair> definitions;
 
     @ManyToOne
     User user;

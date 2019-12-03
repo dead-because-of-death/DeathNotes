@@ -1,29 +1,20 @@
 package kojima.genius.deathnotes.controllers;
 
-import kojima.genius.deathnotes.entities.Note;
 import kojima.genius.deathnotes.entities.User;
-import kojima.genius.deathnotes.repositories.NoteRepository;
 import kojima.genius.deathnotes.repositories.UserRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
-import java.util.List;
 
 @Controller
 public class MainMenuController {
 
-    NoteRepository noteRep;
-
     UserRepository userRep;
 
-    public MainMenuController(NoteRepository noteRep, UserRepository userRep) {
-        this.noteRep = noteRep;
+    public MainMenuController(UserRepository userRep) {
         this.userRep = userRep;
     }
 
@@ -39,12 +30,13 @@ public class MainMenuController {
             if (!user.getNotes().isEmpty()) {
                 userDataAndNotes.addAttribute("notes", user.getNotes());
                 userDataAndNotes.addAttribute("hasmessage", true);
-            }else {
-                userDataAndNotes.addAttribute("hasmessage", false);
+            }
+            if (!user.getDictionaries().isEmpty()) {
+                userDataAndNotes.addAttribute("dictionaries", user.getDictionaries());
+                userDataAndNotes.addAttribute("hasdictionary", true);
             }
         }else {
             userDataAndNotes.addAttribute("logged", false);
-            userDataAndNotes.addAttribute("hasmessage", false);
         }
 
         return "menu";
